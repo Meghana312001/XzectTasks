@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task5_HtmlAndCss@Meghana</title>
+<style>
+    
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header,
+nav,
+main,
+footer {
+  padding: 1rem;
+}
+
+
+/* Mobile styles */
+@media (max-width: 600px) {
+  nav ul {
+    display: block;
+  }
+
+  nav ul li {
+    margin: 1rem 0;
+  }
+}
+
+/* Tablet styles */
+@media (min-width: 601px) and (max-width: 768px) {
+  nav ul {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  main {
+    padding: 1.5rem;
+  }
+}
+
+/* Desktop styles */
+@media (min-width: 769px) {
+  nav ul {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  main {
+    padding: 2rem;
+  }
+}
+
+
+body {
+  position: relative;
+}
+
+.header {
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  padding: 20px 30px;
+  column-gap: 410px;
+  align-items: center;
+  height: 50px;
+  background: transparent;
+}
+
+.header .logo h1 {
+  color: rgb(0, 0, 0);
+}
+
+.header .header-item {
+  display: flex;
+  column-gap: 30px;
+}
+
+.header .header-item a {
+  text-decoration: none;
+  font-size: 20px;
+  color: black;
+}
+
+.home {
+  background-image: linear-gradient(299deg, #d3d3d3, #e9edf4);
+  background-size: cover;
+  height: 565px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  justify-content: center;
+}
+
+.home .main-sec {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 88px;
+  padding-top: 80px;
+}
+
+.home .main-sec .left .txt {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+
+.home .left .txt p {
+  font-size: 59px;
+  color: rgb(40, 40, 40);
+  font-weight: 700;
+}
+
+.home .left .txt h3 {
+  color: rgb(49, 49, 49);
+}
+
+.home .left .txt .btnrow {
+  display: flex;
+  column-gap: 25px;
+}
+
+.home .left .image img {
+  height: 30px;
+  padding-top: 10px;
+  width: 109px;
+}
+
+.home .left .image p {
+  display: inline-block;
+  color: rgb(114, 114, 114);
+}
+
+.home .left {
+  width: 46vw;
+  padding: 30px;
+  padding-top: 109px;
+}
+
+.home .right {
+  width: 46vw;
+  padding-top: 10%;
+}
+
+.main2 .rows {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 38px;
+  padding-top: 30px;
+}
+
+.main2 .right {
+  width: 46vw;
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+
+.main2 .left {
+  width: 46vw;
+  padding-top: 5%;
+}
+
+.main3 .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 68px;
+  padding-top: 80px;
+}
+
+.main3 .right {
+  display: block;
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  background-color: rgb(254, 247, 236);
+}
+
+.main3 .left {
+  width: 46vw;
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+
+.main4 .ros {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: -28px;
+}
+
+.main4 .right {
+  width: 46vw;
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+
+.main4 .left {
+  width: 46vw;
+  /* padding-top: 10%; */
+
+}
+
+.container1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding-top: 65px;
+  padding-inline-start: 15px;
+}
+
+.container2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 15px;
+}
+
+.container3 {
+  display: flex;
+  flex-direction: row;
+  font-size: 30px;
+  padding-top: 30px;
+  color: rgb(23, 23, 23);
+  font-weight: bold;
+  justify-content: space-around;
+  margin-left: -80px;
+
+}
+
+.content1 {
+  font-size: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-top: 20px;
+  color: rgb(49, 49, 49);
+  font-weight: bold;
+}
+
+.contents .rows {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 38px;
+  padding-top: 30px;
+}
+
+.contents .right {
+  width: 46vw;
+  padding-top: 2%;
+  row-gap: 30px;
+  margin-left: -20px;
+}
+
+.contents .left {
+  width: 46vw;
+  margin-left: 40px;
+  padding-top: 2%;
+}
+
+.main5 .roz {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main5 .right {
+  width: 46vw;
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+
+.main5 .left {
+  width: 46vw;
+  /* padding-top: 10%; */
+
+}
+
+.main6 .rov {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 80px;
+}
+
+.main6 .left {
+  width: 46vw;
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+
+.main6 .right {
+  width: 46vw;
+  /* padding-top: 10%; */
+
+}
+.containt .lr {
+display: flex;
+flex-direction: row;
+justify-content: space-evenly;
+}
+.containt .lr .left{
+width: 46vw;
+display: flex;
+flex-direction: column;
+row-gap: 30px;      
+}
+.containt .lr .right{
+width: 46vw;
+display: flex;
+}
+
+.last2 .roe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 38px;
+  padding-top: 30px;
+}
+
+.last2 .right {
+  width: 46vw;
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+
+.last2 .left {
+  width: 46vw;
+  padding-top: 5%;
+}
+.container12 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 15px;
+}
+</style>
+  <header>
+    <nav class="header">
+      <div class="logo">
+        <img src="https://dsathemes.com/html/soltech_1.1/files/images/logo-indigo.png" width="180px" height="40px"
+          alt="logo">
+      </div>
+      <div class="header-item">
+        <a href=""></a>
+        <a class="home-btn" href="/">About</a>
+        <a href="/">Services</a>
+        <a href="/">Customers</a>
+        <a href="/">Pricing</a>
+        <a href="/">FAQs</a>
+        <button
+          style="font-size:20px; color: rgb(255, 255, 255); background-color: rgb(0, 191, 255); padding-inline: 15px; border-radius: 8px; border-color: rgb(0, 191, 255); align-items: center;">Get
+          Started</button>
+      </div>
+    </nav>
+  </header>
+</head>
+<body>
+  <section class="home">
+    <div class="main-sec">
+      <div class="left">
+        <div class="txt">
+          <p>Quality is the secret to creating a target market.</p>
+          <h3>the secreat of our success is Providing the the quality with security is the main motto for our company.
+          </h3>
+
+          <div class="btnrow">
+            <a href="#">
+              <button
+                style="font-size:22px; color: rgb(255, 255, 255); background-color: rgb(0, 191, 255); padding: 15px; border-radius: 12px; border-color: rgb(0, 191, 255); align-items: center;">Get
+                Started Now</button>
+            </a>
+            <a href="#">
+              <button
+                style="font-size:22px; color: black; background-color:transparent; padding: 15px; border-radius: 12px">Find
+                Out More</button>
+            </a>
+          </div>
+        </div>
+        <div class="image">
+          <img src="https://dsathemes.com/html/soltech_1.1/files/images/customer-avatar.svg" alt="plp">
+          <p>Trusted By 12k+ Worldwide<br> Brands And Customers</p>
+        </div>
+      </div>
+
+      <div class="right">
+        <img decoding="async" width="550px" height="550px"
+          src="https://dsathemes.com/html/soltech_1.1/files/images/hero-7-img.svg" alt="">
+      </div>
+    </div>
+  </section>
+  <section>
+    <h2 style=" padding-top: 110px; text-align: center; color: rgb(68, 68, 68);"> Trusted by companies, big or
+      not-so-big:</h2>
+  </section>
+  <section>
+    <div class="container">
+      <ul style="display: flex; align-items: center; justify-content: space-around; padding-top: 60px; ">
+        <ol> <img style="filter: grayscale(100%);" src="https://www.digital-lync.com/images/p1.webp" alt="Top Companies"
+            width="157" height="50"> </ol>
+        <ol> <img style="filter: grayscale(100%);" src="https://www.digital-lync.com/images/p2.webp" alt="Top Companies"
+            width="185" height="50"> </ol>
+        <ol> <img style="filter: grayscale(100%);" src="https://www.digital-lync.com/images/p3.webp" alt="Top Companies"
+            width="140" height="25"> </ol>
+        <ol> <img style="filter: grayscale(100%);" src="https://www.digital-lync.com/images/p4.webp" alt="Top Companies"
+            width="179" height="40"> </ol>
+        <ol> <img style="filter: grayscale(100%);" src="https://www.digital-lync.com/images/p5.webp" alt="Top Companies"
+            width="110" height="44"> </ol>
+      </ul>
+      <br>
+      <br>
+      <br>
+      <br>
+      <ul style="display: flex; align-items: center; justify-content: space-around">
+        <ol> <img style="filter: grayscale(100%);" src="https://www.digital-lync.com/images/p6.webp" alt="Top Companies"
+            width="160" height="50"> </ol>
+        <ol> <img style="filter: grayscale(100%);" src="https://www.digital-lync.com/images/p7.webp" alt="Top Companies"
+            width="167" height="25"> </ol>
+        <ol> <img style="filter: grayscale(100%);" src="https://www.digital-lync.com/images/p8.webp" alt="Top Companies"
+            width="151" height="50"> </ol>
+        <ol> <img style="filter: grayscale(100%);" src="https://www.digital-lync.com/images/p9.webp" alt="Top Companies"
+            width="89" height="50"> </ol>
+        <ol> <img style="filter: grayscale(100%);" src="https://www.digital-lync.com/images/p10.webp"
+            alt="Top Companies" width="89" height="25"> </ol>
+        <ol> <img src="https://www.digital-lync.com/images/p12.webp" alt="Top Companies" width="129" height="25"> </ol>
+      </ul>
+      <br>
+      <br>
+      <br>
+    </div>
+  </section>
+  <section class="main2">
+    <hr>
+    <div class="rows">
+      <div class="left">
+        <img decoding="async" width="690px" height="590px"
+          src="https://dsathemes.com/html/soltech_1.1/files/images/img-05.svg" alt="">
+      </div>
+      <div class="right">
+        <h3 style="padding-bottom: 30px; color: rgb(95, 95, 95);">PERSONALIZED STRATEGY</h3>
+        <h1 style="font-size: 58px; color: rgb(39, 39, 39);">Reach your target audience effectively
+        </h1>
+        <p style=" font-size: larger; color: rgb(110, 110, 110);">Sapien tempor sodales quaerat ipsum congue undo
+          laoreet turpis neque auctor turpis vitae dolor luctus
+          placerat magna and ligula cursus purus vitae purus an ipsum auris suscipit</p>
+        <li style=" font-size: larger; color: rgb(110, 110, 110);">Tempor sapien quaerat ipsum laoreet purus and sapien
+          dolor diam ultrice ipsum aliquam congue and dolor cursus</li>
+        <li style=" font-size: larger; color: rgb(110, 110, 110);">Tempor sapien quaerat ipsum laoreet purus and sapien
+          dolor diam ultrice ipsum aliquam congue and dolor cursus</li>
+      </div>
+    </div>
+  </section>
+  <section class="main3">
+    <br>
+    <div class="container">
+      <div class="left">
+        <h3 style="margin-left: -10px; color: rgb(95, 95, 95);">STRATEGIES THAT WORK</h3>
+        <h1 style="margin-left: -9px; font-size: 58px; color: rgb(39, 39, 39);">
+          Everything you<br> need to get more<br> leads and sales </h1>
+        <p style="margin-left: -9px; font-size: 20px; color: rgb(110, 110, 110);">Sodales tempor
+          sapien quaerat ipsum congue and undo<br> laoreet turpis neque auctor turpis vitae dolor luctus<br> placerat
+          magna
+          ligula cursus vitae</p>
+        <p style="margin-left: -9px; padding-top: 15px; font-size: larger; color: rgb(110, 110, 110);">Tempor sapien
+          quaerat ipsum laoreet purus and sapien <br>dolor diam ultrice ipsum aliquam congue and dolor cursus</p>
+      </div>
+
+      <div class="right">
+        <div class="up" style="display: flex; flex-direction: row; justify-content: space-between;">
+          <div
+            style="font-size: 25px; display: flex; background-color: #efefef; flex-direction: column;padding-left: 20px;">
+            Digital Marketing <p style="font-size: 18px;padding-top: 10px; padding-left: 10px;">Porta semper lacus and
+              <br> cursus feugiat at primis <br>ultrice a ligula auctor
+            </p>
+          </div>
+          <div
+            style="background-color: #f4f4f4;padding-left: 20px; font-size: 25px; display: flex; flex-direction: column;padding-left: 20px;">
+            Dev and Design<p style="font-size: 18px;padding-top: 10px; padding-left: 20px;">Porta semper lacus and <br>
+              cursus feugiat at primis <br>ultrice a ligula auctor</p>
+          </div>
+        </div>
+        <div class="down"
+          style="display: flex; flex-direction: row; justify-content: space-between; padding-top: 30px;">
+          <div
+            style="background-color: #efefef;font-size: 25px; display: flex; flex-direction: column; padding-left: 20px;">
+            Data & Analytics<p style="font-size: 18px;padding-top: 10px; padding-left: 10px;">Porta semper lacus and
+              <br> cursus feugiat at primis <br>ultrice a ligula auctor
+            </p>
+          </div>
+          <div
+            style="background-color: #f5f5f5;padding-left: 20px; font-size: 25px; display: flex; flex-direction: column;padding-left: 20px;">
+            Content Stratergy<p style="font-size: 18px;padding-top: 10px; padding-left: 20px;">Porta semper lacus and
+              <br> cursus feugiat at primis <br>ultrice a ligula auctor
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <br>
+    <br>
+    <h1 style="font-size: 60px; text-align: center; color: rgb(43, 43, 43);"> Everything in One Place</h1>
+    <h1 style="font-size: 20px;  text-align: center; color: rgb(110, 110, 110);">Ligula risus auctor tempus magna
+      feugiat lacinia fusce blandit</p>
+      <br>
+      <br>
+      <br>
+      <a href="https://www.youtube.com/embed/SZEflIVnhH8"><img
+          src="https://dsathemes.com/html/soltech_1.1/files/images/dashboard-02.svg" height="720px" width="1350px"
+          alt="">
+      </a>
+      <br>
+      <br>
+  </section>
+  <section style="padding-top: 10px; padding-bottom: 40px;">
+    <table class="w3-row" style="margin: 20px; width: 100%;">
+      <tr style="display: inline-flexbox; text-align: center; font-size: 60px; color: #363636;">
+        <th>42%</th>
+        <th>78%</th>
+        <th>46.3k</th>
+      </tr>
+      <br>
+      <tr style=" display: inline-flexbox; text-align: center;font-size: 15px; color: #858585;">
+        <td>Augue magna justo <br> integer and velna</td>
+        <td>Augue magna justo <br> integer and velna</td>
+        <td>Augue magna justo <br> integer and velna</td>
+      </tr>
+    </table>
+    </div>
+  </section>
+  <hr>
+  <br>
+  <br>
+  <br>
+  <br>
+  <section class="main4">
+    <div class="ros">
+      <div class="left">
+        <img decoding="async" width="690px" height="590px"
+          src="https://dsathemes.com/html/soltech_1.1/files/images/img-04.svg" alt="">
+      </div>
+      <div class="right">
+        <h3 style="padding-bottom: 30px;  color: rgb(137, 136, 136);">One Stop Solutions</h3>
+        <h1 style="font-size: 58px;  color: rgb(48, 48, 48);">Cutting-edge solutions for your online
+          business
+        </h1>
+        <li style=" font-size: larger; color: rgb(110, 110, 110);">Tempor sapien quaerat undo ipsum laoreet purus and
+          sapien dolor ociis ultrice quisque and congue aliquam dolor cursus a congue varius</li>
+        <li style=" font-size: larger; color: rgb(110, 110, 110);">Quaerat sapien tempor undo ipsum laoreet purus and
+          sapien dolor ociis ultrice quisque and congue aliquam dolor cursus a varius congue ultrices</li>
+      </div>
+    </div>
+  </section>
+  <section>
+    <h1 style="padding: 10px; padding-top: 5%; font-size: 60px;color: rgb(48, 48, 48);">
+      <center>Build a customer-centric<br> marketing strategy</center>
+    </h1>
+    <p style=" text-align: center; padding: 5px;  font-size: 20px;color: rgb(86, 86, 86);">Ligula risus auctor tempus
+      magna feugiat lacinia fusce blandit</p>
+    </section>
+    <section>
+      <div class="container1">
+        <div class="1"
+          style="background-color: rgb(236, 236, 236); border-radius: 15px; padding-bottom: 20px; margin-left:40px;">
+          <p style="font-weight: bolder; font-size:28px; padding-left: 45px; padding-top: 55px; color: rgb(68, 68, 68);">
+            Marketing Integrations</p>
+          <li
+            style="margin-left: 20px; font-size: 18px; color: #727272; padding-bottom: 15px; padding-top: 20px; padding-left: 24px;">
+            Quaerat ipsum magna congue ipsum laoreet cursus placerat <br> neque auctor purus quaerat </li>
+          <li
+            style="margin-left: 25px; font-size: 18px; color: #727272; padding-bottom: 45px; padding-top: 20px; padding-left: 24px;">
+            Tempor sapien luctus egestas varius laoreet suscipit ipsum <br> a purus sapien dolor cursus</li>
+          <img src="https://dsathemes.com/html/soltech_1.1/files/images/integrations.svg" width="600px" height="300px"
+            alt="">
+
+        </div>
+        <div class="2"
+          style="background-color: rgb(236, 236, 236); border-radius: 15px; padding-bottom: 20px; margin-left:10px; margin-right: 50px;">
+          <p style="font-weight: bolder; font-size:28px; padding-left: 45px; padding-top: 55px; color: rgb(68, 68, 68);">
+            Personalized Stratergy</p>
+          <li
+            style="margin-left: 20px; font-size: 18px; color: #727272; padding-bottom: 15px; padding-top: 20px; padding-left: 24px;">
+            Tempor sapien luctus egestas varius laoreet suscipit ipsum a<br> purus sapien dolor cursus</li>
+          <li
+            style="margin-left: 25px; font-size: 18px; color: #727272; padding-bottom: 35px; padding-top: 20px; padding-left: 24px;">
+            Quaerat ipsum magna congue ipsum laoreet cursuersueges <br>placerat neque auctor purus quaerat </li>
+          <img src="https://dsathemes.com/html/soltech_1.1/files/images/analytics.svg" width="600px" height="300px"
+            alt="img">
+        </div>
+      </div>
+    </section>
+    <section>
+
+      <div class="container2">
+        <div class="1"
+          style=" margin-left: -55px; background-color: rgb(236, 236, 236); padding-top: 20px; border-radius: 15px; padding-bottom: 1px ;  margin-left:10px; margin-right: 50px;">
+          <p style="font-weight: bolder; font-size:24px; padding-left: 20px; color: rgb(44, 44, 44);"> Advanced Analysis
+          </p>
+          <p style=" padding-left: 20px; padding-top: 25px; color: #858585; font-size:17px ;">Aliquam augue suscipit
+            luctus and neque <br>purus an ipsum neque dolor primis ipsum <br> and laoreet dapibus
+          </p>
+          <img src="https://dsathemes.com/html/soltech_1.1/files/images/f_05.svg" width="370px" height="320px" alt="">
+
+        </div>
+        <div class="2"
+          style="background-color: rgb(236, 236, 236); border-radius: 15px; padding-top: 20px; padding-bottom: 1px; margin-left: -97px; margin-right: -57px;">
+
+          <p style="font-weight: bolder; font-size:24px; color: rgb(43, 43, 43); padding-left: 20px; margin-right: 40px;">
+            Effortless
+            Integration</p>
+          <p style=" padding-left: 20px;  padding-top: 25px; color: #858585; font-size:17px ;">Aliquam augue suscipit
+            luctus and neque <br> purus an ipsum neque dolor primis ipsum <br>and laoreet dapibus
+          </p>
+          <img src="https://dsathemes.com/html/soltech_1.1/files/images/f_02.svg" width="370px" height="320px" alt="img">
+        </div>
+        <div class="3"
+          style="background-color: rgb(236, 236, 236); border-radius: 15px; padding-top: 20px; padding-bottom: 1px;">
+          <p style="font-weight: bolder; font-size:24px; text-align: center; color: rgb(42, 42, 42);"> Content Management
+          </p>
+          <p style=" padding-left: 20px;  padding-top: 25px; color: #858585; font-size:17px ;">Aliquam augue suscipit
+            luctus and neque <br> purus an ipsum neque dolor primis ipsum <br>and laoreet dapibus
+          </p>
+          <img src="https://dsathemes.com/html/soltech_1.1/files/images/f_07.svg" width="370px" height="320px" alt="">
+        </div>
+      </div>
+    </section>
+  <section>
+    <h1 style="padding: 10px; padding-top: 5%; font-size: 65px;color: rgb(48, 48, 48);">
+      <center>The Complete Solutions</center>
+    </h1>
+    <p style=" text-align: center; padding: 5px;  font-size: 20px;color: rgb(86, 86, 86);">Ligula risus auctor tempus
+      magna feugiat lacinia fusce blandit</p>
+  </section>
+  <section class="contents">
+    <div class="rows">
+      <div class="left">
+        <p style=" font-size: 30px; font-weight: 600; color: rgb(39, 39, 39); margin-left: 33px; padding-bottom: 10px;">
+          Branding Services</p>
+        <p style="margin-left: 39px; color: rgb(110, 110, 110); padding-bottom:20px; font-size: 19px;">Porta semper
+          lacus cursus feugiat a primis ligula
+          ultrice risus <br> an
+          auctor tempus feugiat diam turpis impedit auctor felis and <br>
+          augue mauris blandit</p>
+        <p
+          style=" font-size: 30px; font-weight: 600; color: rgb(39, 39, 39); margin-left: 32px;  padding-bottom: 10px;">
+          Content Creation</p>
+        <p style=" margin-left: 40px; color: rgb(110, 110, 110); padding-bottom:20px; font-size: 19px;">Porta semper
+          lacus cursus feugiat a primis ligula
+          ultrice risus <br> an
+          auctor tempus feugiat diam turpis impedit auctor felis and <br>
+          augue mauris blandit</p>
+        <p
+          style=" font-size: 30px; font-weight: 600; color: rgb(39, 39, 39); margin-left: 32px;  padding-bottom: 10px;">
+          Competitor Analysis
+        </p>
+        <p style=" margin-left: 40px; color: rgb(110, 110, 110); padding-bottom:20px; font-size: 19px;">Porta semper
+          lacus cursus feugiat a primis ligula ultrice risus <br> an
+          auctor tempus feugiat diam turpis impedit auctor felis and <br>
+          augue mauris blandit</p>
+
+      </div>
+      <div class="right">
+        <p style=" font-size: 30px; font-weight: 600; color: rgb(39, 39, 39); margin-left: 33px; padding-bottom: 10px;">
+          Market Research</p>
+        <p style="margin-left: 39px; color: rgb(110, 110, 110); padding-bottom:20px; font-size: 19px;">Porta semper
+          lacus cursus feugiat a primis ligula
+          ultrice risus <br> an
+          auctor tempus feugiat diam turpis impedit auctor felis and <br>
+          augue mauris blandit</p>
+        <p
+          style=" font-size: 30px; font-weight: 600; color: rgb(39, 39, 39); margin-left: 32px;  padding-bottom: 10px;">
+          e-Commerce Solutions</p>
+        <p style=" margin-left: 40px; color: rgb(110, 110, 110); padding-bottom:20px; font-size: 19px;">Porta semper
+          lacus cursus feugiat a primis ligula
+          ultrice risus <br> an
+          auctor tempus feugiat diam turpis impedit auctor felis and <br>
+          augue mauris blandit</p>
+        <p
+          style=" font-size: 30px; font-weight: 600; color: rgb(39, 39, 39); margin-left: 32px;  padding-bottom: 10px;">
+          SEO & SMM Services
+        </p>
+        <p style=" margin-left: 40px; color: rgb(110, 110, 110); padding-bottom:20px; font-size: 19px;">Porta semper
+          lacus cursus feugiat a primis ligula ultrice risus <br> an
+          auctor tempus feugiat diam turpis impedit auctor felis and <br>
+          augue mauris blandit</p>
+
+      </div>
+    </div>
+  </section>
+  <section class="main5">
+    <div class="roz">
+      <div class="left">
+        <img decoding="async" width="590px" height="590px"
+          src="https://dsathemes.com/html/soltech_1.1/files/images/img-02.svg" alt="">
+      </div>
+      <div class="right">
+        <h3 style="padding-bottom: 30px;  color: rgb(137, 136, 136);">ENDLESS POSSIBILITIES</h3>
+        <h1 style="font-size: 58px;  color: rgb(48, 48, 48);">Unlock the potential of your brand online </h1>
+        <p style=" font-size: larger; color: rgb(110, 110, 110);">Tempor sapien quaerat undo ipsum laoreet purus and
+          sapien dolor ociis ultrice quisque and congue aliquam dolor cursus a congue varius</p>
+        <div style="display: flex; flex-direction: row; color: #303030; justify-content: space-around;">
+          <div>
+            <h3 style="font-weight: bolder;">Smart</h3>
+          </div>
+          <div>
+            <h3 style="font-weight: bolder;">Flexible</h3>
+          </div>
+        </div>
+        <div style="display: flex; flex-direction: row; color: #414141; justify-content: space-around;">
+          <div>
+            <p style="font-weight: bold;">Sodales sapien quaerat diam blandit <br>purus a placerat turpis diam cubilia
+              <br>laoreet mauris
+            </p>
+          </div>
+          <div>
+            <p style="font-weight: bold;">Sodales sapien quaerat diam blandit <br>purus a placerat turpis diam cubilia
+              <br>laoreet mauris
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="main6">
+    <div class="rov">
+      <div class="left">
+        <p style="padding-bottom: 10px; font-weight: 500; font-size: 18px; color: rgb(137, 136, 136);">STRATEGY &
+          CONSULTING</p>
+        <h1 style="font-size: 58px;  color: rgb(48, 48, 48);">Interact with your customers faster</h1>
+        <p style=" font-size: larger; color: rgb(110, 110, 110);">Tempor sapien quaerat undo ipsum laoreet purus and
+          sapien dolor ociis ultrice quisque and congue aliquam dolor cursus a congue varius</p>
+        <p style=" font-size: larger; color: rgb(110, 110, 110);">Tempor sapien quaerat undo ipsum laoreet purus and
+          sapien dolor ociis ultrice quisque and congue aliquam dolor cursus a congue varius</p>
+        <div style="display: flex; flex-direction: row; color: #303030; justify-content: space-around;">
+          <div>
+            <h3 style="font-weight: bolder; font-size: 35px;">65k</h3>
+          </div>
+          <div>
+            <h3 style="font-weight: bolder; font-size: 35px;">86%</h3>
+          </div>
+        </div>
+        <div style="display: flex; flex-direction: row; color: #5d5d5d; justify-content: space-around;">
+          <div>
+            <p style="font-weight: bold;">Porta justo integer <br>a velna vitae auctor</p>
+          </div>
+          <div>
+            <p style="font-weight: bold;">Porta justo integer <br>a velna vitae auctor</p>
+          </div>
+        </div>
+      </div>
+      <div class="right">
+        <img decoding="async" width="730px" height="600px"
+          src="https://dsathemes.com/html/soltech_1.1/files/images/tablet-01.png" alt="">
+      </div>
+    </div>
+  </section>
+  <section>
+    <h1 style="padding: 10px; padding-top: 5%; font-size: 60px;color: rgb(48, 48, 48);">
+      <center>Our Happy Customers</center>
+    </h1>
+    <p style=" text-align: center; padding: 5px;  font-size: 20px;color: rgb(86, 86, 86);">Read what our lovely
+      customers think about us</p>
+  </section>
+  <section>
+    <div class="r" style="display: flex; flex-direction: row;  text-align: justify; justify-content: space-around;">
+      <div class="col" style="display: flex; flex-direction: column; padding-top: 75px;"><img style="padding-bottom: 20px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw0ZLRruVcYQUdYntWq6-7dcAIcZKC22E3QQ&s" width="180px" height="30px" alt=""> <h2 style="font-weight: bolder;">Great Product,services</h2>
+        <div>Aliquam nullam tempor sapien gravida donec <br>porta congue ipsum justo velna auctor lacus <br>a suscipit
+          egestas magna aliquam and cubilia <br>augue blandit</div>
+      </div>
+      <div class="col" style="display: flex; flex-direction: column; padding-top: 75px;"><img style="padding-bottom: 20px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw0ZLRruVcYQUdYntWq6-7dcAIcZKC22E3QQ&s" width="180px" height="30px" alt=""> <h2 style="font-weight: bolder;">Best Support</h2>
+          <div>Aliquam nullam tempor sapien gravida donec <br>porta congue ipsum justo velna auctor lacus <br>a suscipit
+            egestas magna aliquam and cubilia <br>augue blandit</div>
+      </div>
+      <div class="col" style="display: flex; flex-direction: column; padding-top: 75px;"> <img style="padding-bottom: 20px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw0ZLRruVcYQUdYntWq6-7dcAIcZKC22E3QQ&s" width="180px" height="30px" alt=""><h2 style="font-weight: bolder;">Perfect choice</h2>
+          <div>Aliquam nullam tempor sapien gravida donec <br>porta congue ipsum justo velna auctor lacus <br>a suscipit
+                  egestas magna aliquam and cubilia <br>augue blandit</div>
+      </div>
+  </section>
+  <section>
+
+    <div style="display: flex; flex-direction: row; justify-content: space-evenly;padding-top: 5%;" class="containt ">
+      <div class="lr"
+        style="background-color: rgb(236, 236, 236); border-radius: 15px; padding-bottom: 20px; margin-left:40px;">
+        <div class="left" style="padding-top: 10%;">
+          <h2 style=" margin-left: 10px; font-size: 38px;  color: rgb(48, 48, 48); padding-bottom: 10px;">Solutions that
+            will make your<br> business successful</h2>
+          <li style="margin-left: 20px; font-size: larger; color: rgb(110, 110, 110);">Tempor sapien quaerat undo ipsum
+            laoreet purus <br> and
+            sapien dolor ociis ultrice quisque and congue <br> aliquam dolor cursus a congue varius</li>
+          <li style=" margin-left: 20px; font-size: larger; color: rgb(110, 110, 110);">Cursus purus suscipit vitae
+            egestas augue volute <br>
+            placerat undo vitae ultrice sapien</li>
+        </div>
+        <div style="margin-left: -10%; margin-top: -1%;" class="right">
+          <img decoding="async" width="590px" height="470px"
+            src="https://dsathemes.com/html/soltech_1.1/files/images/progress-left.svg" alt="">
+  </section>
+  <section>
+    <h1 style="padding: 10px; padding-top: 5%; font-size: 65px;color: rgb(32, 32, 32);">
+      <center>Seamless integration with all <br>your essential tools</center>
+    </h1>
+    <p style=" text-align: center; padding: 5px;  font-size: 20px;color: rgb(86, 86, 86);">Ligula risus auctor tempus
+      magna feugiat lacinia fusce blandit</p>
+  </section>
+  <section>
+    <div class="containerq">
+      <ul
+        style="display: flex; flex-direction: row; align-items: center; justify-content: space-around; padding-top: 60px; ">
+        <ol> <img style="display: flex; flex-direction: column;"
+            src="https://assets-global.website-files.com/5ff9d835eb709ccb35200fed/5ffbad1005a29e99f937aba2_Vector%402x.png"
+            alt="Top Companies" width="57" height="50">Zapier </ol>
+        <ol> <img style="display: flex; flex-direction: column;"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-qs63m0_Y2cLnIu5VcCQHz9-gV1ErR3IKVrIUroqLpOkJSg0YCMFzrBMiX9w7OkI-XXM&usqp=CAU"
+            alt="Top Companies" width="54" height="49">Intercom </ol>
+        <ol> <img style="display: flex; flex-direction: column;"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2csLIt6n0Zyh4SK6Ol2C422FXTo1GAF1QnA&s"
+            alt="Top Companies" width="50" height="50"> Zenddesk </ol>
+        <ol> <img style="display: flex; flex-direction: column;"
+            src="https://play-lh.googleusercontent.com/mzJpTCsTW_FuR6YqOPaLHrSEVCSJuXzCljdxnCKhVZMcu6EESZBQTCHxMh8slVtnKqo=w240-h480-rw"
+            alt="Top Companies" width="50" height="52">Slack </ol>
+        <ol> <img style="display: flex; flex-direction: column;"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2XvfMEGCyU0aAHJ6ESc627ahk9Ocd5o85QQ&s"
+            alt="Top Companies" width="54" height="49">Trello </ol>
+        <ol> <img style="display: flex; flex-direction: column;"
+            src="https://play-lh.googleusercontent.com/yhSWKwNXmQFWGtxZlfGQXUekQxnSJ4OayrnOZH5KWiPUoXPEfH8-Dp7RwjYD5bNETQ=w240-h480-rw"
+            alt="Top Companies" width="50" height="50">Notation </ol>
+      </ul>
+      <br>
+      <br>
+      <br>
+      <br>
+      <ul
+        style="display: flex; padding-top: 20px; align-items: center; flex-direction: row; justify-content: space-around">
+        <ol> <img style="display: flex; flex-direction: column;"
+            src="https://play-lh.googleusercontent.com/0oO5sAneb9lJP6l8c6DH4aj6f85qNpplQVHmPmbbBxAukDnlO7DarDW0b-kEIHa8SQ=s48-rw"
+            alt="Top Companies" width="50" height="50">Discord </ol>
+        <ol> <img style="display: flex; flex-direction: column;"
+            src="https://play-lh.googleusercontent.com/BbI6xxBrccM3T6cd6D0ReUveoB5-OfFoRUXYFPRVd5dieX-tqnFQh7u7N8-fLf4_wJU=w240-h480-rw"
+            alt="Top Companies" width="50" height="50">shopify </ol>
+        <ol> <img style="display: flex; flex-direction: column;"
+            src="https://play-lh.googleusercontent.com/6mWr6zBNrLByO7wPhcYQ5m6tqEswStT7E2b_FB3lEOvIngXj_hEj_0p6jZaOWHE-i34=w240-h480-rw"
+            alt="Top Companies" width="51" height="50"> hotspot </ol>
+        <ol> <img style="display: flex; flex-direction: column;"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdC0ImgO0HLWfCRH8UPfK4AvK5dWr-JgZGoE9eS2vNOK2e-0w_1LpOgejcsohHeAoxWHY&usqp=CAU"
+            alt="Top Companies" width="49" height="50"> firebase </ol>
+        <ol> <img style="display: flex; flex-direction: column;"
+            src="https://play-lh.googleusercontent.com/IBV0NyRdxyNlCgyWnbeZs3rkPYfNXlPJ4-rF0ok3Biox_N-GjLtMZ7Qub5HTmVZiWjg=w240-h480-rw"
+            alt="Top Companies" width="49" height="50"> Mailchimp </ol>
+        <ol> <img style="display: flex; flex-direction: column;"
+            src="https://play-lh.googleusercontent.com/yZsmiNjmji3ZoOuLthoVvptLB9cZ0vCmitcky4OUXNcEFV3IEQkrBD2uu5kuWRF5_ERA=s48-rw"
+            alt="Top Companies" width="49" height="50">Zoom </ol>
+      </ul>
+      <br>
+      <br>
+      <br>
+    </div>
+  </section>
+  <section class="last2">
+    <hr>
+    <div class="roe">
+      <div class="left">
+        <img decoding="async" width="690px" height="590px"
+          src="https://dsathemes.com/html/soltech_1.1/files/images/img-03.svg" alt="">
+      </div>
+      <div class="right">
+        <h1 style="font-size: 58px; color: rgb(39, 39, 39);">Transforming Solutions</h1>
+        <ol style=" font-size: larger; color: rgb(110, 110, 110);">Tempor sapien sodales quaerat ipsum congue undo
+          laoreet turpis <br> neque auctor turpis vitae dolor luctus placerat magna and ligula cursus <br> purus vitae
+          purus an
+          ipsum suscipit auris</ol>
+        <ol style=" font-size: larger; color: rgb(110, 110, 110);">Sapien tempor sodales quaerat ipsum congue undo
+          laoreet turpis <br> neque auctor turpis vitae dolor luctus placerat magna and ligula cursus <br> purus vitae
+          purus an
+          ipsum auris suscipit</ol>
+      </div>
+    </div>
+  </section>
+  <section>
+    <h1 style="padding: 10px; padding-top: 5%; font-size: 65px;color: rgb(32, 32, 32);">
+      <center>Latest News & Insights</center>
+    </h1>
+  </section>
+  <section>
+
+    <div class="container12">
+      <div class="1"
+        style=" margin-left: -55px; background-color: rgb(255, 255, 255); padding-top: 20px; border-radius: 15px; padding-bottom: 1px ;  margin-left:10px; margin-right: 50px;">
+        <img src="https://masco-html.netlify.app/assets/img/th-4/course-img-1.jpg" width="370px" height="320px" alt="">
+        <p style="font-weight: bolder; font-size:24px; padding-left: 20px; padding-top: 30px; color: rgb(44, 44, 44);">
+          Integer urna turpis donec ipsum <br>a porta justo auctor
+        </p>
+        <p style=" padding-left: 20px; padding-top: 25px; color: #858585; font-size:17px ;">Aliquam augue suscipit
+          luctus and neque <br>purus an ipsum neque dolor primis ipsum <br> and laoreet dapibus
+        </p>
+
+      </div>
+      <div class="2"
+        style="background-color: rgb(255, 255, 255); border-radius: 15px; padding-top: 20px; padding-bottom: 1px; margin-left: -97px; margin-right: -57px;">
+        <img src="https://masco-html.netlify.app/assets/img/th-4/course-img-2.jpg" width="370px" height="320px"
+          alt="img">
+        <p
+          style="font-weight: bolder; font-size:24px; color: rgb(43, 43, 43); padding-top: 30px; padding-left: 20px; margin-right: 40px;">
+          A ligula risus diam auctor</p>
+        <p style=" padding-left: 20px;  padding-top: 25px; color: #858585; font-size:17px ;">Aliquam augue suscipit
+          luctus and neque <br> purus an ipsum neque dolor primis ipsum <br>and laoreet dapibus
+        </p>
+      </div>
+      <div class="3"
+        style="background-color: rgb(255, 255, 255); border-radius: 15px; padding-top: 20px; padding-bottom: 1px;">
+        <img src="https://masco-html.netlify.app/assets/img/th-4/course-img-3.jpg" width="370px" height="320px" alt="">
+        <p style="font-weight: bolder; font-size:24px;padding-top: 30px; text-align: center; color: rgb(42, 42, 42);">
+          Donec sapien augue and integer <br> turpis cursus</p>
+        <p style=" padding-left: 20px;  padding-top: 25px; color: #858585; font-size:17px ;">Aliquam augue suscipit
+          luctus and neque <br> purus an ipsum neque dolor primis ipsum <br>and laoreet dapibus
+        </p>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div style="display: flex; flex-direction: row; justify-content: space-evenly;padding-top: 5%;" class="containt ">
+      <div class="lr"
+        style="background-color: rgb(236, 236, 236); border-radius: 15px; padding-bottom: 20px; margin-left:40px;">
+        <div class="left" style="padding-top: 10%;">
+          <h2 style=" margin-left: 10px; font-size: 38px;  color: rgb(48, 48, 48); padding-bottom: 10px;">Join 25K+
+            businesses
+            <br> already growing with SolTech
+          </h2>
+          <ol style="margin-left: 20px; font-size: larger; color: rgb(110, 110, 110);">Start your free 14-day trial. No
+            credit card required.</ol>
+        </div>
+        <div style="margin-left: -10%; margin-top: 1%;" class="right">
+          <img decoding="async" width="590px" height="270px"
+            src="https://dsathemes.com/html/soltech_1.1/files/images/progress-left.svg" alt="">
+  </section>
+  <section>
+    <div class="r" style="display: flex; flex-direction: row;  text-align: justify; justify-content: space-around;">
+      <div class="col" style="display: flex; flex-direction: column; padding-top: 75px; color: #858585;"> <img style="padding-bottom: 10px;"
+          src="https://dsathemes.com/html/soltech_1.1/files/images/logo-indigo.png" width="145px" height="45px" alt="">
+        <div>Aliquam nullam tempor sapien gravida donec <br>porta congue ipsum justo velna auctor lacus <br>a suscipit
+          egestas magna aliquam and cubilia <br>augue blandit</div>
+      </div>
+      <div class="col" style="display: flex; flex-direction: column; padding-top: 75px; color: #858585;"> <b style="padding-bottom: 10px;color: #303030;">About</b>
+        <div>About Us</div>
+        <div>Our Team</div>
+        <div>Careers</div>
+        <div>Press & Media</div>
+        <div>Contact Us</div>
+      </div>
+
+      <div class="col" style="display: flex; flex-direction: column; padding-top: 75px; color: #858585;"><b style="padding-bottom: 10px; color: #303030;">Discover</b>
+        <div>Core Services</div>
+        <div>Integration</div>
+        <div>Pricing Plans</div>
+        <div>Help & Support</div>
+        <div>Our Blog</div>
+      </div>
+
+      <div class="col" style="display: flex; flex-direction: column; padding-top: 75px; color: #858585;"><b style="padding-bottom: 10px; color: #303030;">legal</b>
+        <div>Advertising</div>
+        <div>Terms of Use</div>
+        <div>Privacy Policy</div>
+        <div>Cookie Policy</div>
+        <div>Site Map</div>
+      </div>
+      <div class="col" style="display: flex; flex-direction: column; padding-top: 75px; color: #858585;"><b style="padding-bottom: 10px; color: #303030;">Social</b>
+        <div>Facebook</div>
+        <div>Twitter</div>
+        <div>LinkedIn</div>
+        <div>Dribble</div>
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <hr>
+  </section>
+  <br>
+  <br>
+</body>
+<footer style="color: #858585; margin-left: 20px;">
+  © 2024 Meghana. All Rights Reserved
+</footer>
+</html>
